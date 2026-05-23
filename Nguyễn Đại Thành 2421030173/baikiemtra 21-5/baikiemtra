@@ -1,0 +1,77 @@
+print("CAU 1")
+n = int(input("Nhap n: "))
+day_so = []
+
+for i in range(n):
+    x = float(input(f"Nhap x{i+1}: "))
+    day_so.append(x)
+
+thoa_man = []
+for x in day_so:
+    if 0 < x < 1000:
+        thoa_man.append(x)
+
+if len(thoa_man) > 0:
+    trung_binh = sum(thoa_man) / len(thoa_man)
+    print(f"Cac phan tu thoa man: {thoa_man}")
+    print(f"Trung binh cong: {trung_binh}")
+else:
+    print("Khong co phan tu nao thoa man")
+
+print("\nCAU 2")
+n = input("Nhap so nguyen duong n: ")
+tong = 0
+
+for ky_tu in n:
+    tong += int(ky_tu)
+
+if tong % 3 == 0:
+    print(f"Tong cac chu so = {tong} => chia het cho 3")
+else:
+    print(f"Tong cac chu so = {tong} => khong chia het cho 3")
+
+
+print("\nCAU 3")
+n = input("Nhap so nguyen duong n: ")
+tich = 1
+
+for ky_tu in n:
+    tich *= int(ky_tu)
+
+print(f"Tich cac chu so = {tich}")
+if tich % 2 == 0 and tich > 20:
+    print("La so chan va lon hon 20 => Thoa man")
+else:
+    print("Khong thoa man dieu kien")
+
+
+print("\nCAU 4")
+a = int(input("Nhap a: "))
+b = int(input("Nhap b: "))
+tong = a + b
+print(f"Tong: {a} + {b} = {tong}")
+
+lon_nhat = 0
+for ky_tu in str(tong):
+    if int(ky_tu) > lon_nhat:
+        lon_nhat = int(ky_tu)
+
+print(f"Chu so lon nhat trong {tong} la: {lon_nhat}")
+
+
+print("\nCAU 5")
+m = int(input("Nhap m: "))
+n = input("Nhap n: ")
+
+tong_chu_so = 0
+for ky_tu in n:
+    tong_chu_so += int(ky_tu)
+
+print(f"Tong cac chu so cua {n} = {tong_chu_so}")
+
+if tong_chu_so == 0:
+    print("Tong chu so bang 0, khong chia duoc")
+elif m % tong_chu_so == 0:
+    print(f"{m} chia het cho {tong_chu_so}")
+else:
+    print(f"{m} khong chia het cho {tong_chu_so}")
